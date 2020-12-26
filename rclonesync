@@ -612,7 +612,7 @@ def load_list(lslfile):
                         d[filename] = {'size': size, 'datetime': date_time}
 
                 else:
-                    logging.warning("Something wrong with this line (ignored) in {}.  (Google Doc files cannot be synced.):\n   <{}>".format(lslfile, line))
+                    logging.debug("Something wrong with this line (ignored) in {}.  (Google Doc files cannot be synced.):\n   <{}>".format(lslfile, line))
         return 0, collections.OrderedDict(sorted(d.items()))        # return Success and a sorted list
 
     except Exception as e:
